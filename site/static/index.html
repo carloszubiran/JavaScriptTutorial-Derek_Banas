@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <script src="jstut.js"></script>
+
+        <style>
+            body {font-size: 1.6em;}
+            .hidden{display: none;}
+            .show{display: inline !important;}
+            button{
+                border: 2px solid black; background: #E5E4E2;
+                font-size: .5em; font-weight: bold; color: black;
+                padding: .8em 2em;
+                margin-top: .4em;
+            }
+
+        </style>
+
+    </head>
+
+<body>
+
+    <p id="sayHello"></p>
+
+    <script>
+
+//        var yourName = prompt("What is your name?");
+//
+//        if(yourName != null) {
+//            document.getElementById("sayHello").innerHTML = "Hello " + yourName;
+//        }
+//
+//        else{
+//            alert("Please enter a name next time");
+//
+//        }
+
+        document.write("5 + 4", 5 + 4, "<br />");
+
+        document.write("Max Num = ", Number.MAX_VALUE, "<br />");
+        document.write("Min Num = ", Number.MIN_VALUE, "<br />");
+
+        precisionTest = 0.10000000000000001;
+        document.write(precisionTest + 0.10000000000000001, "<br />");
+
+        var balance = 1563.87;
+        document.write("Monthly Payment : ", (balance / 12).toFixed(2), "<br />");
+
+        document.write("Math.E =", Math.E, "<br />");
+
+//        for(i = 0; i < 10001; i++)
+        document.write("Random # (1-10) =", Math.floor(Math.random() * 10) + 1, "<br />");
+
+
+        document.write("Converted Int: ", parseInt("5"), "<br />");
+
+        document.write("Converted String:  ", Number("3.14"), "<br />");
+
+        var randStr = "A long " + "string that " + "does on and on";
+
+        document.write("Index for \"does\" :", randStr.indexOf("goes") + "<br />");
+
+        document.write(randStr.slice(19, 23) + "<br />");
+        document.write(randStr.slice(19) + "<br />");
+        document.write(randStr.substr(19, 4)  + "<br />");
+        document.write(randStr.replace("and on", "forever")  + "<br />");
+
+        document.write("At Index 2 : ", randStr.charAt(2) + "<br />");
+
+        var randStrArray = randStr.split(" ");
+
+        randStr = randStr.trim();
+
+        document.write(randStr.toUpperCase() + "<br />");
+        document.write(randStr.toLocaleLowerCase() + "<br />");
+
+        var strToStyle = "Random String";
+
+        document.write("Big : ", strToStyle.big(), "<br />");
+        document.write("Bold : ", strToStyle.bold(), "<br />");
+        document.write("Font Color : ", strToStyle.fontcolor("blue"), "<br />");
+        document.write("Font Size : ", strToStyle.fontsize("8em"), "<br />");
+        document.write("Italics : ", strToStyle.italics(), "<br />");
+        document.write("Google : ", strToStyle.link("http://google.com"), "<br />");
+        document.write("Small : ", strToStyle.small(), "<br />");
+        document.write("Strike : ", strToStyle.strike(), "<br />");
+        document.write("Sub : ", strToStyle.sub(), "<br />");
+        document.write("Sup : ", strToStyle.sup(), "<br />");
+
+        var customer = {
+            name: "Carlos Zubiran",
+            address: "123 Main",
+            balance: 50.50
+        };
+
+        for(k in customer){
+
+            document.write(customer[k] + "<br />");
+
+        }
+
+        var tomSmith = ["Tom Smith", "123 Main", 120.50];
+
+        document.write("1st Index ", tomSmith[0], "<br />");
+
+        tomSmith[3] = "tSmith@aol.com";
+
+        tomSmith.splice(2, 1, "Pittsburgh", "PA");
+
+        tomSmith.splice(4, 1);
+
+        document.write("Array : ", tomSmith.valueOf(), "<br />");
+
+        document.write("Array : ", tomSmith.join(", ", "<br />"));
+
+        delete tomSmith[3];
+
+        tomSmith.sort();
+
+        var numbers = [4, 3, 9, 1, 20, 43];
+
+        // Ascending Order x - y
+        // Decreasing Order y - x
+        numbers.sort(function (x,y){ return x - y});
+
+        document.write("<br /> Num Array : ", numbers.toString() + "<br />");
+
+        var combinedArray = numbers.concat(tomSmith);
+
+        tomSmith.pop();
+
+        tomSmith.push("555-1212", "US");
+
+        tomSmith.shift();
+
+        tomSmith.unshift("Tom Smith");
+
+        for(i = 0; i < tomSmith.length; i++){
+
+            document.write(tomSmith[i] + "<br />");
+
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+
+
+</html>
